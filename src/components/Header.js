@@ -1,6 +1,6 @@
 import React from 'react';
 import changeRouteFactory from '../utils/changeRouteFactory'
-import Button from './Button'
+import Button from './Button2'
 
 const Header = ({history}) => {
 

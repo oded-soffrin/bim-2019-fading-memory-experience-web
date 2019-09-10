@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Button from './Button'
+import Button from './Button2'
 // import changeRouteFactory from '../utils/changeRouteFactory'
 import Page from './Page'
 import axios from 'axios'
