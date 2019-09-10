@@ -1,7 +1,25 @@
 .App {
   text-align: center;
 }
+.navbar {
+  background: black;
+  height: 70px;
+  padding-left:100px;
+}
 
+.menu {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.menu .button {
+  margin-right: 20px;
+}
+
+.row {
+  display: flex;
+}
 .App-logo {
   animation: App-logo-spin infinite 10s linear;
   pointer-events: none;

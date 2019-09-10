@@ -1,25 +1,28 @@
 import React from 'react';
+import HomePage from './components/HomePage'
+import AboutPage from './components/AboutPage'
+import WizardPage from './components/WizardPage'
+import GalleryPage from './components/GalleryPage'
+import Header from './components/Header'
 import './App.css';
-import Button from './components/button'
+
+import { Router, Route } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 
 function App() {
 
+  const customHistory = createBrowserHistory();
+  
   return (
     <div className="App">
-      <div className="App-logo" alt="logo">
-          BIM
-        </div>
-      <header className="App-header">
-        <p>Welcome!</p>
-        
-        <Button
-          label={'Start!'}
-        />
-        
-      </header>
-      
-      
-    </div>
+        <Header history={customHistory} />
+        <Router history={customHistory}>
+          <Route path='/' exact  key={`home`} component={HomePage} />
+          <Route path='/about' exact key={`about`}  component={AboutPage} />
+          <Route path='/gallery' exact key={`gallery`}  component={GalleryPage} />
+          <Route path='/wizard' exact key={`wizard`}  component={WizardPage} />
+        </Router>
+      </div>
   );
 }
 

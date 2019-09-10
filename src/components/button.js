@@ -1,9 +1,9 @@
 import React from 'react';
-
-export default ({label}) => {
+import './Button.css'
+export default ({label, onClick, big}) => {
     return (
-        <button>
+        <div className={`button ${big ? 'big' : ''}`} onClick={onClick}>
           {label}
-        </button>
+        </div>
     );
 }
