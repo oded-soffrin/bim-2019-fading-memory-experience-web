@@ -2,6 +2,7 @@ import React from 'react';
 import HomePage from './components/HomePage'
 import AboutPage from './components/AboutPage'
 import WizardPage from './components/WizardPage'
+import ImagePage from './components/ImagePage'
 import GalleryPage from './components/GalleryPage'
 import Header from './components/Header'
 import './App.css';
@@ -21,6 +22,7 @@ function App() {
           <Route path='/about' exact key={`about`}  component={AboutPage} />
           <Route path='/gallery' exact key={`gallery`}  component={GalleryPage} />
           <Route path='/wizard' exact key={`wizard`}  component={WizardPage} />
+          <Route path='/image/:imageId' exact key={`image`}  component={ImagePage} />
         </Router>
       </div>
   );
