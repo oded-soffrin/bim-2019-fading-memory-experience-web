@@ -13,9 +13,8 @@ const snapshot = approved => {
         image_idx: "109",
         image_url: "/Users/odeds/Downloads/unnamed%20(2).png"
     }
-    //file://
-
-    const isMock = true;
+    
+    const isMock = false;
 
     if (isMock) {
         return Promise.resolve(mockReturn)
