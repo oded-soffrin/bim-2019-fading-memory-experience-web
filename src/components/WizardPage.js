@@ -13,7 +13,7 @@ const HomePage = ({history}) => {
         setLoading(true)
         api.snapshot(approved)
         .then(snapshotData => {
-            changeRoute(`/image/${snapshotData.image_idx}`)
+            changeRoute(`/imagepage/${snapshotData.image_idx}`)
         })
     }
 

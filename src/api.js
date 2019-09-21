@@ -42,7 +42,7 @@ export const getGallery = () => {
     if (isDev) {
         return mockRequest([1,2,3]);
     } else {
-        return axios.post('http://localhost:5000/POST', {count}).then(res => {
+        return axios.post('http://localhost:5000/gallery', {count}).then(res => {
             console.log("got images", res.data);
             return res.data;
         });

@@ -22,7 +22,7 @@ function App() {
           <Route path='/about' exact key={`about`}  component={AboutPage} />
           <Route path='/gallery' exact key={`gallery`}  component={GalleryPage} />
           <Route path='/wizard' exact key={`wizard`}  component={WizardPage} />
-          <Route path='/image/:imageId' exact key={`image`}  component={ImagePage} />
+          <Route path='/imagepage/:imageId' exact key={`image`}  component={ImagePage} />
         </Router>
       </div>
   );
