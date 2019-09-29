@@ -3,6 +3,8 @@ import Page from './Page'
 import Button from './Button2'
 import * as api from '../api';
 import { Link } from "react-router-dom";
+import { getImageSrc} from '../utils/global'
+
 
 
 export default ({match}) => {
@@ -41,11 +43,15 @@ export default ({match}) => {
     
     return (
         <Page>
-            <div>
-                <h1>BOOM!</h1>
-                <img src={`/image?id=${imageId}`} alt="snapshot"/>
-                {emailSection}
+        
+            <div>BOOM!</div>
+            
+            <div className='dynamic'>
+            
+            <img  src={getImageSrc(imageId)} alt="snapshot"/>
             </div>
+            {emailSection}
+            
         </Page>
     );
 }

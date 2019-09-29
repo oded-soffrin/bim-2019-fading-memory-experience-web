@@ -74,6 +74,43 @@ input.mail {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
+.dynamic {
+  flex: 1 1;
+}
+
+.gallery {
+  display: felx;
+  flex-wrap: wrap;
+}
+
+.galleryImage {
+  width: 200px;
+  padding: 10px;
+}
+
+.fullScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullScreen .x {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  border: 1px solid white;
+  padding: 5px;
+  width: 100px;
+  border-radius: 40px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

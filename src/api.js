@@ -1,5 +1,5 @@
 import axios from 'axios'
-const isDev = window.location.href.indexOf('localhost:3000') >= 0;
+import {isDev} from './utils/global'
 
 const MockImageReturn = {
     image_idx: "109",
@@ -37,10 +37,10 @@ export const sendMail = ( email, imageId) => {
 }
 
 export const getGallery = () => {
-    console.log('getting latest images');
+    
     const count = 10;
     if (isDev) {
-        return mockRequest([1,2,3]);
+        return mockRequest([1,[2],3,4,5,5,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6]);
     } else {
         return axios.post('http://localhost:5000/gallery', {count}).then(res => {
             console.log("got images", res.data);
