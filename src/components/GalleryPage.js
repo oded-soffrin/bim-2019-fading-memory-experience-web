@@ -7,8 +7,12 @@ export default () => {
 
     const [images, setImages] = useState([]);
     const [expanded, expand] = useState(-1);
+
+    const expandClick = id => {
+        window.keepalive();
+        expand(id);
+    }
     useEffect(() => {
-        
         api.getGallery().then(res => {
             
             setImages(res.map(x => typeof(x) === 'object' ? x[0] : x))
@@ -17,7 +21,7 @@ export default () => {
     
     const maybeExpanded = expanded > -1 && (
         <div className='fullScreen'>
-            <div className='x' onClick={() => expand(-1)}>X</div>
+            <div className='x' onClick={() => expandClick(-1)}>X</div>
             <img className='fullScreenImage' src={getImageSrc(expanded)} key={`fullscreen`} alt={`fullscreen`}/>
         </div>
     );
@@ -29,7 +33,7 @@ export default () => {
             <p>Gallery page!</p>
             <div className='gallery'>
             {images.map((imgId, i) => {
-                return <img onClick={() => expand(imgId)} className='galleryImage' src={getImageSrc(imgId)} key={`snapshot${i}`} alt={`snapshot${i}`}/>
+                return <img onClick={() => expandClick(imgId)} className='galleryImage' src={getImageSrc(imgId)} key={`snapshot${i}`} alt={`snapshot${i}`}/>
             })}
             </div>
         </Page>

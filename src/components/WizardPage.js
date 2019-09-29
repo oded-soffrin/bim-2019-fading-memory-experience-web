@@ -5,12 +5,23 @@ import { withRouter } from 'react-router-dom';
 import changeRouteFactory from '../utils/changeRouteFactory'
 import * as api from '../api';
 
+const PROC = {type: 'proc'}
+const TIMER = {type: 'timer'}
 const HomePage = ({history}) => {
     const changeRoute = changeRouteFactory(history);
-    const [loading, setLoading] = useState(false);
+    const [state, setState] = useState({});
 
+    const timer = (approved, sec = 10) => {
+        setState({...TIMER, time: sec})
+        if (sec > 0) {
+            setTimeout(() => timer(approved, sec-1), 1000)
+        } else {
+            next(approved)
+        }
+
+    }
     const next = (approved) => {
-        setLoading(true)
+        setState(PROC)
         api.snapshot(approved)
         .then(snapshotData => {
             changeRoute(`/imagepage/${snapshotData.image_idx}`)
@@ -18,11 +29,14 @@ const HomePage = ({history}) => {
     }
 
     let wizardSection = false;
-    if (loading) {
+    if (state.type === PROC.type) {
         wizardSection = <div>Processing...</div>;
+    }
+    else if (state.type === TIMER.type) {
+        wizardSection = <div>Timer: {state.time}</div>
     } else {
         wizardSection = (
-            <InstructionsSection next={next} />
+            <InstructionsSection next={timer} />
         );
     }
     return (

@@ -9,11 +9,13 @@ import './App.css';
 
 import { Router, Route } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
+import Watchdog from './components/Watchdog'
 
 function App() {
 
   const customHistory = createBrowserHistory();
-  
+  const watchdog = new Watchdog(customHistory);
+  console.log('watchdog started, going home in ', watchdog.restartMin, 'minutes');
   return (
     <div className="App">
         <Header history={customHistory} />
