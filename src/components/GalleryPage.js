@@ -29,7 +29,7 @@ export default () => {
             <p>Gallery page!</p>
             <div className='gallery'>
             {images.map((imgId, i) => {
-                return <img onClick={() => expand(i)} className='galleryImage' src={getImageSrc(imgId)} key={`snapshot${i}`} alt={`snapshot${i}`}/>
+                return <img onClick={() => expand(imgId)} className='galleryImage' src={getImageSrc(imgId)} key={`snapshot${i}`} alt={`snapshot${i}`}/>
             })}
             </div>
         </Page>
