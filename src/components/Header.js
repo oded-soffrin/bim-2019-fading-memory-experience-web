@@ -1,9 +1,16 @@
 import React from 'react';
 import changeRouteFactory from '../utils/changeRouteFactory'
 import Button from './Button2'
+import { useTranslation } from 'react-i18next';
 
 const Header = ({history}) => {
 
+    const { t, i18n } = useTranslation();
+
+    const changeLanguage = lng => {
+      i18n.changeLanguage(lng);
+    };
+  
     const changeRoute = changeRouteFactory(history);
 
     return (
@@ -11,7 +18,7 @@ const Header = ({history}) => {
             <div className="App-logo" alt="logo">BIM</div>
             <div className='menu'>         
                 <Button
-                label={'Home'}
+                label={t('NAVBAR_HOME')}
                 onClick={() => changeRoute('/')}
                 />
                 <Button
@@ -22,6 +29,9 @@ const Header = ({history}) => {
                 label={'Gallery'}
                 onClick={() => changeRoute('/gallery')}
                 />
+
+                <button onClick={() => changeLanguage('he')}>HE</button>
+                <button onClick={() => changeLanguage('en')}>EN</button>
             </div>
         </div>
     )

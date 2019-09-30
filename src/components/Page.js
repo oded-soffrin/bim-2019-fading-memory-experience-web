@@ -1,13 +1,18 @@
 import React, {useEffect} from 'react';
 
-export default  ({children}) => {
+const Page = ({children}) => {
+
+  
 
   useEffect(() => {
     window.keepalive();
   }, [])
   return (
       <header className="App-header">
+          
           {children}
       </header>
     );
 }
+
+export default Page;

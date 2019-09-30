@@ -1,0 +1,14 @@
+{
+    "en": {
+        "translation": {
+            "HOME_WELCOME" : "Welcome!",
+            "NAVBAR_HOME": "Home"
+        }        
+    },
+    "he": {
+        "translation": {
+            "HOME_WELCOME" : "ברוך הבא!",
+            "NAVBAR_HOME": "הביתה"
+        }
+    }
+}
