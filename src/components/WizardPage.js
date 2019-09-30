@@ -12,6 +12,10 @@ const HomePage = ({history}) => {
     const [state, setState] = useState({});
 
     const timer = (approved, sec = 10) => {
+
+        if (sec === 10) {
+            api.flash();
+        }
         setState({...TIMER, time: sec})
         if (sec > 0) {
             setTimeout(() => timer(approved, sec-1), 1000)

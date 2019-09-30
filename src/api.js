@@ -49,3 +49,7 @@ export const getGallery = () => {
     }
 
 }
+
+export const flash = () => {
+    return axios.post('http://127.16.0.3:5000') 
+}
