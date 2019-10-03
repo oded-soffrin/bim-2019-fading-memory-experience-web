@@ -14,7 +14,7 @@ const HomePage = ({history}) => {
     const timer = (approved, sec = 10) => {
 
         if (sec === 10) {
-            api.snapshot().then(snapshotData => {
+            api.snapshot(approved).then(snapshotData => {
                 changeRoute(`/imagepage/${snapshotData.image_idx}`)
             })
         }
