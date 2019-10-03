@@ -63,7 +63,11 @@ a {
   color: white;
 }
 
-input.mail {
+.keyboard {
+  background: black;
+}
+
+.keyboard > input, input.mail {
   background: black;
   color: white;
   font-size: 30px;

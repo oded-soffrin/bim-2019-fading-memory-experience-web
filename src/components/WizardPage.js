@@ -14,24 +14,18 @@ const HomePage = ({history}) => {
     const timer = (approved, sec = 10) => {
 
         if (sec === 10) {
-            api.flash();
+            api.snapshot().then(snapshotData => {
+                changeRoute(`/imagepage/${snapshotData.image_idx}`)
+            })
         }
         setState({...TIMER, time: sec})
         if (sec > 0) {
             setTimeout(() => timer(approved, sec-1), 1000)
         } else {
-            next(approved)
+            setState(PROC)
         }
-
     }
-    const next = (approved) => {
-        setState(PROC)
-        api.snapshot(approved)
-        .then(snapshotData => {
-            changeRoute(`/imagepage/${snapshotData.image_idx}`)
-        })
-    }
-
+    
     let wizardSection = false;
     if (state.type === PROC.type) {
         wizardSection = <div>Processing...</div>;

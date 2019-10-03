@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 import { getImageSrc} from '../utils/global'
 
 
+import KeyboardedInput from 'react-touch-screen-keyboard';
+import 'react-touch-screen-keyboard/lib/Keyboard.css'; // if you just want css
+
 
 export default ({match}) => {
 
@@ -31,16 +34,40 @@ export default ({match}) => {
             </div>
         );
     }
+
+
     else if (mailStatus === 'sending') {
         emailSection = <p>Saving...</p>
     } else {
+        const CustomMapping = [
+            ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
+            ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', '@'],
+            ['z', 'x', 'c', 'v', 'b', 'n', 'm', '.com']
+          ];
         emailSection = <div>
             <p>Please mail it to after the burn:</p>
-            <input onChange={e => setMail(e.target.value)} placeholder='mymail@midburn.co.il' value={mail} className='mail' type='text' />
+
+            <div className='keyboard'>
+                <KeyboardedInput
+                    containerClassName='mail'
+                    className='mail'
+                    value={mail}
+                    defaultKeyboard={CustomMapping}
+                    placeholder={'mymail@midburn.co.il'}
+                    isFirstLetterUppercase={false}
+                    onChange={(value) => {
+                        setMail(value);
+                    }}
+                    enabled
+                    
+                />
+            </div>
             <Button onClick={onSendMail} label={'Mail!'} />
         </div>
     }
     
+    
+
     return (
         <Page>
         
@@ -52,6 +79,7 @@ export default ({match}) => {
             </div>
             {emailSection}
             
+          
         </Page>
     );
 }
