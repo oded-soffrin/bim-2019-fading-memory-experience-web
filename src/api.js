@@ -16,6 +16,7 @@ export const snapshot = approved => {
     if (isDev) {
         return mockRequest(MockImageReturn);
     } else {
+        axios.post('http://172.16.0.3:5000/', {dummy: 'True'}); //blinker
         return axios.post('http://localhost:5000/', {approved}).then(res => {
             console.log("snapshot got ", res);
             return res.data;
