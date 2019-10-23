@@ -30,7 +30,7 @@ export const sendMail = ( email, imageId) => {
     if (isDev) {
         return mockRequest({});
     } else {
-        return axios.post('http://localhost:5000/mailto', {imageId, email}).then(res => {
+        return axios.post('http://localhost:5000/mailto', {id: imageId, email}).then(res => {
             console.log("registered");
             return res.data;
         });
