@@ -70,12 +70,10 @@ export default ({match}) => {
 
     return (
         <Page className2='imagePage'>
-        
-            <div>BOOM!</div>
-            
+            <div>BOOM!</div>    
             <div className='dynamic'>
             
-                <img src={getImageSrc(imageId)} alt="snapshot"/>
+                <img className='image-shot' src={getImageSrc(imageId)} alt="snapshot"/>
             </div>
             {emailSection}
             

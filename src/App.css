@@ -6,6 +6,8 @@
   font-family: 'Merriweather', serif;
 
 }
+
+
 .navbar {
   background: white;
   height: 70px;
@@ -41,21 +43,7 @@
   display: flex;
   justify-content: space-evenly;
 }
-.App-logo {
-  animation: App-logo-spin infinite 10s linear;
-  pointer-events: none;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  color: white;
-  height: 50px;
-  width: 50px;
-  border: 1px solid white;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 
 .App-header {
   background-color: #282c34;
@@ -143,17 +131,25 @@ a {
   border-radius: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-.homePage {
+.App-header.homePage {
   background-size: cover;
-  filter: grayscale(100%);
+  justify-content: normal;
+  background-blend-mode: saturation;
+  background-color: transparent;
 
 }
+
+.imagePage .image-shot {
+  height: 460px;
+}
+
+
+.title {
+  padding-top: 100px;
+  padding-bottom: 80px;
+  font-weight: 300;
+  color: black;
+  font-size: 91px;
+}
+

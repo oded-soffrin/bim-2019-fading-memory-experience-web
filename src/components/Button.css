@@ -6,7 +6,16 @@
 }
 
 .button.big {
-    padding: 20px;
+    padding: 15px;
+}
+
+.button.new {
+    background-color: #925718;
+    width: 300px;
+    border: none;
+    border-radius: 40px;
+    font-size: 34px;
+
 }
 
 .button:not(.simple):hover {
@@ -16,3 +25,4 @@
 .button:hover {
     cursor: pointer;
 }
+

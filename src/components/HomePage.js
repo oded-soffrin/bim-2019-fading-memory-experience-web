@@ -12,13 +12,13 @@ const HomePage = ({history}) => {
     const { t } = useTranslation();
     const bgimage = getImageSrc(0)
     return (
-    <Page className2='homePage' styles={{backgroundImage: `url(${bgimage})`}}>        
-        <p>{t('HOME_WELCOME')}</p>
+    <Page className2='homePage' styles={{backgroundImage: `linear-gradient(black, black), url(${bgimage})`}}>        
+        <div className='title'>{t('HOME_WELCOME')}</div>
         
         <Button
-            big
+            type='big new'
             onClick={() => {changeRoute('wizard')}}
-          label={t('START')}
+            label={t('START')}
         />
     </Page>
     );
