@@ -46,11 +46,11 @@ export default ({match}) => {
           ];
         emailSection = <div>
             <p>Please mail it to after the burn:</p>
-
+            
             <div className='keyboard'>
                 <KeyboardedInput
-                    containerClassName='mail'
-                    className='mail'
+                    containerClassName='imagePage'
+                    keyboardClassName='keyboardClassName'
                     value={mail}
                     defaultKeyboard={CustomMapping}
                     placeholder={'mymail@midburn.co.il'}
@@ -59,23 +59,23 @@ export default ({match}) => {
                         setMail(value);
                     }}
                     enabled
-                    
                 />
             </div>
             <Button onClick={onSendMail} label={'Mail!'} />
+            
         </div>
     }
     
     
 
     return (
-        <Page>
+        <Page className2='imagePage'>
         
             <div>BOOM!</div>
             
             <div className='dynamic'>
             
-            <img  src={getImageSrc(imageId)} alt="snapshot"/>
+                <img src={getImageSrc(imageId)} alt="snapshot"/>
             </div>
             {emailSection}
             

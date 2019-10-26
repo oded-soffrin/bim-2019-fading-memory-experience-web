@@ -8,7 +8,6 @@ import { withRouter } from 'react-router-dom';
 
 const HomePage = ({history}) => {
     const changeRoute = changeRouteFactory(history);
-
     const { t } = useTranslation();
     return (
     <Page>
@@ -17,7 +16,7 @@ const HomePage = ({history}) => {
         <Button
             big
             onClick={() => {changeRoute('wizard')}}
-          label={'Start!'}
+          label={t('START')}
         />
     </Page>
     );

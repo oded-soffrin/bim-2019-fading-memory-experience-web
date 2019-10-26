@@ -22,13 +22,14 @@ const Header = ({history}) => {
                 onClick={() => changeRoute('/')}
                 />
                 <Button
-                label={'About'}
-                onClick={() => changeRoute('/about')}
-                />
-                <Button
-                label={'Gallery'}
+                label={t('NAVBAR_GALLERY')}
                 onClick={() => changeRoute('/gallery')}
                 />
+                <Button
+                label={t('NAVBAR_ABOUT')}
+                onClick={() => changeRoute('/about')}
+                />
+                
 
                 <button onClick={() => changeLanguage('he')}>HE</button>
                 <button onClick={() => changeLanguage('en')}>EN</button>

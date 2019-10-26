@@ -65,8 +65,13 @@ a {
 
 .keyboard {
   background: black;
+  /* margin-bottom: 100px;; */
+
 }
 
+.keyboardClassName {
+  margin-bottom: 100px;
+}
 .keyboard > input, input.mail {
   background: black;
   color: white;
@@ -81,6 +86,10 @@ a {
 
 .dynamic {
   flex: 1 1;
+}
+
+.dyanmic img {
+  height: 480px;
 }
 
 .gallery {

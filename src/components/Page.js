@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 
-const Page = ({children}) => {
+const Page = ({children, className2 = ''}) => {
 
   
 
@@ -8,7 +8,7 @@ const Page = ({children}) => {
     window.keepalive();
   }, [])
   return (
-      <header className="App-header">
+      <header className={`App-header ${className2}`}>
           
           {children}
       </header>
