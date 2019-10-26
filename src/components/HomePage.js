@@ -12,7 +12,7 @@ const HomePage = ({history}) => {
     const { t } = useTranslation();
     const bgimage = getImageSrc(0)
     return (
-    <Page className2='homePage' styles={{'background-image': `url(${bgimage})`}}>        
+    <Page className2='homePage' styles={{backgroundImage: `url(${bgimage})`}}>        
         <p>{t('HOME_WELCOME')}</p>
         
         <Button

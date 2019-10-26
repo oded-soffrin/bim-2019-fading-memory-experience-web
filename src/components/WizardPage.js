@@ -1,13 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Page from './Page'
 import InstructionsSection from './InstructionsSection'
 import { withRouter } from 'react-router-dom';
 import changeRouteFactory from '../utils/changeRouteFactory'
+import { useTranslation } from 'react-i18next';
 import * as api from '../api';
 
+const DotLoader = () => {
+    const [dots, setDots] = useState('.');
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (dots.length === 3) {
+                setDots('.');
+            } else {
+                setDots(`${dots}.`);
+            }
+        }, 1000)
+        return () => {
+            window.clearInterval(interval);
+        }
+    });
+    return (<span>{dots}</span>);
+}
 const PROC = {type: 'proc'}
 const TIMER = {type: 'timer'}
 const HomePage = ({history}) => {
+    const { t } = useTranslation();
     const changeRoute = changeRouteFactory(history);
     const [state, setState] = useState({});
 
@@ -28,10 +46,10 @@ const HomePage = ({history}) => {
     
     let wizardSection = false;
     if (state.type === PROC.type) {
-        wizardSection = <div>Processing...</div>;
+        wizardSection = <div>{t('PROCESSING')}<DotLoader /></div>;
     }
     else if (state.type === TIMER.type) {
-        wizardSection = <div>Timer: {state.time}</div>
+        wizardSection = <div>{state.time}</div>
     } else {
         wizardSection = (
             <InstructionsSection next={timer} />

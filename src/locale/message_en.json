@@ -5,7 +5,17 @@
             "NAVBAR_HOME": "Home",
             "NAVBAR_GALLERY": "Gallery",
             "NAVBAR_ABOUT": "About",
-            "START": "START"
+            "START": "START",
+            "INSTRUCTIONS_TITLE": "Instructions",
+            "INSTRUCTIONS_1": "You’re about to take a picture of yourself plan your grand pose ~3 meters in front of the camera",
+            "INSTRUCTIONS_2": "Answer the question below and take 10 seconds to prepare",
+            "INSTRUCTIONS_3": "Once the blinking green light in front of the camera will turn off - the picture will be captured.",
+            "INSTRUCTIONS_Q": "Can we keep your picture for future artistic usage?",
+            "YES": "Yes",
+            "NO": "No",
+            "PROCESSING": "Memory Fading",
+            "HE": "He",
+            "EN": "En"
         }        
     },
     "he": {
@@ -14,7 +24,17 @@
             "NAVBAR_HOME": "הביתה",
             "NAVBAR_GALLERY": "לגלריה",
             "NAVBAR_ABOUT": "מה זה?",
-            "START": "התחל"
+            "START": "התחל",
+            "INSTRUCTIONS_TITLE": "הוראות",
+            "INSTRUCTIONS_1": "אתה עומד לצלם את עצמך",
+            "INSTRUCTIONS_2": "תכנן את פוזת הברן הכי גרנדיוזית שלך - 3 מטרים לפני המצלמה",
+            "INSTRUCTIONS_3": "ענה על השאלה למטה וקח 10 שניות להתכונן",
+            "INSTRUCTIONS_Q": "אתה מרשה לנו לשמור את התמונה לשימוש אמנותי?",
+            "YES": "כן",
+            "NO": "לא",
+            "PROCESSING": "הזכרון מתפוגג",
+            "HE": "He",
+            "EN": "En"
         }
     }
 }

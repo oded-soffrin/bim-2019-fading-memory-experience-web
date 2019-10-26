@@ -1,4 +1,4 @@
-.button {
+.button:not(.simple) {
     color: white;
     padding: 5px;
     border: 1px solid black;
@@ -9,9 +9,10 @@
     padding: 20px;
 }
 
-.button:hover {
+.button:not(.simple):hover {
     color: red;
-    cursor: pointer;
     border: 1px solid red;
-    
+}
+.button:hover {
+    cursor: pointer;
 }

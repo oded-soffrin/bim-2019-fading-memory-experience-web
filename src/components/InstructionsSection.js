@@ -1,28 +1,28 @@
 import React from 'react';
 import Button from './Button2'
+import { useTranslation } from 'react-i18next';
 
 export default ({next}) => {
+    const { t } = useTranslation();
     return (
         <div className='Instructions-page'>
-            <h1>Instructions</h1>
-            <p>here's how to use this thing you're in</p>
+            <h1>{t('INSTRUCTIONS_TITLE')}</h1>
             <ul>
-                <li>Go</li>
-                <li>Smile</li>
-                <li>Come back</li>
+                <li>{t('INSTRUCTIONS_1')}</li>
+                <li>{t('INSTRUCTIONS_2')}</li>
+                <li>{t('INSTRUCTIONS_3')}</li>
             </ul>
-            <h1>Hi, here's a Question</h1>
-            <p>Can we save the photo?</p>
+            <h1>{t('INSTRUCTIONS_Q')}</h1>
             <div className='row'>
             <Button
                 big
                 onClick={() => {next(true)}}
-            label={'Yes!'}
+            label={t('YES')}
             />
             <Button
                 big
                 onClick={() => {next(false)}}
-            label={'No!'}
+            label={t('NO')}
             />
             </div>
         </div>

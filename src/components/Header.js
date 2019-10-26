@@ -15,24 +15,35 @@ const Header = ({history}) => {
 
     return (
         <div className='navbar'>
-            <div className="App-logo" alt="logo">BIM</div>
             <div className='menu'>         
                 <Button
                 label={t('NAVBAR_HOME')}
+                type='simple'
                 onClick={() => changeRoute('/')}
                 />
                 <Button
                 label={t('NAVBAR_GALLERY')}
+                type='simple'
                 onClick={() => changeRoute('/gallery')}
                 />
                 <Button
                 label={t('NAVBAR_ABOUT')}
+                type='simple'
                 onClick={() => changeRoute('/about')}
                 />
-                
-
-                <button onClick={() => changeLanguage('he')}>HE</button>
-                <button onClick={() => changeLanguage('en')}>EN</button>
+            </div>
+            <div className='menu-lang'>
+                <Button
+                    label={t('HE')}
+                    type='simple'
+                    onClick={() => changeLanguage('he')}
+                />
+                <div>|</div>
+                <Button
+                    label={t('EN')}
+                    type='simple'
+                    onClick={() => changeLanguage('en')}
+                />
             </div>
         </div>
     )
