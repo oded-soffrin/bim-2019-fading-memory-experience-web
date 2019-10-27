@@ -8,7 +8,7 @@ const MockImageReturn = {
 
 const mockRequest = mockResponse => {
     return new Promise((res) => {
-        setTimeout(() => res(mockResponse), 11000);
+        setTimeout(() => res(mockResponse), 100);
     });
 }
 

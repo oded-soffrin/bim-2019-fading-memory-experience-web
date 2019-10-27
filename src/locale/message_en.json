@@ -15,7 +15,8 @@
             "NO": "No",
             "PROCESSING": "Memory Fading",
             "HE": "He",
-            "EN": "En"
+            "EN": "En",
+            "PLEASE_MAIL": "Please mail it to after the burn:"
         }        
     },
     "he": {
@@ -34,7 +35,9 @@
             "NO": "לא",
             "PROCESSING": "הזכרון מתפוגג",
             "HE": "He",
-            "EN": "En"
+            "EN": "En",
+            "PLEASE_MAIL": "אנא שלחו לי במייל את התמונה:"
+
         }
     }
 }

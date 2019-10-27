@@ -21,7 +21,7 @@ export default () => {
     
     const maybeExpanded = expanded > -1 && (
         <div className='fullScreen'>
-            <div className='x' onClick={() => expandClick(-1)}>X</div>
+            <div className='x' onClick={() => expandClick(-1)}>x</div>
             <img className='fullScreenImage' src={getImageSrc(expanded)} key={`fullscreen`} alt={`fullscreen`}/>
         </div>
     );
@@ -30,7 +30,7 @@ export default () => {
     return (
         <Page>
             {maybeExpanded}
-            <p>Gallery page!</p>
+            
             <div className='gallery'>
             {images.map((imgId, i) => {
                 return <img onClick={() => expandClick(imgId)} className='galleryImage' src={getImageSrc(imgId)} key={`snapshot${i}`} alt={`snapshot${i}`}/>

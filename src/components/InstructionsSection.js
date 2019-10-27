@@ -12,7 +12,7 @@ export default ({next}) => {
                 <li>{t('INSTRUCTIONS_2')}</li>
                 <li>{t('INSTRUCTIONS_3')}</li>
             </ul>
-            <h1>{t('INSTRUCTIONS_Q')}</h1>
+            <h2>{t('INSTRUCTIONS_Q')}</h2>
             <div className='row'>
             <Button
                 big

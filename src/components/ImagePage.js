@@ -4,7 +4,7 @@ import Button from './Button2'
 import * as api from '../api';
 import { Link } from "react-router-dom";
 import { getImageSrc} from '../utils/global'
-
+import { useTranslation } from 'react-i18next';
 
 import KeyboardedInput from 'react-touch-screen-keyboard';
 import 'react-touch-screen-keyboard/lib/Keyboard.css'; // if you just want css
@@ -15,7 +15,8 @@ export default ({match}) => {
     const [mail, setMail] = useState('');
     const [mailStatus, setMailStatus] = useState(false);
     const {params: {imageId}} = match;
-    
+    const { t } = useTranslation();
+
     const onSendMail = () => {
         setMailStatus('sending');
         api.sendMail(mail, imageId).then(() => {
@@ -41,11 +42,10 @@ export default ({match}) => {
     } else {
         const CustomMapping = [
             ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
-            ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', '@'],
             ['z', 'x', 'c', 'v', 'b', 'n', 'm', '.com']
           ];
         emailSection = <div>
-            <p>Please mail it to after the burn:</p>
+            <p>{t('PLEASE_MAIL')}</p>
             
             <div className='keyboard'>
                 <KeyboardedInput
@@ -70,7 +70,7 @@ export default ({match}) => {
 
     return (
         <Page className2='imagePage'>
-            <div>BOOM!</div>    
+            
             <div className='dynamic'>
             
                 <img className='image-shot' src={getImageSrc(imageId)} alt="snapshot"/>
