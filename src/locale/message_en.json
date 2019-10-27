@@ -16,7 +16,10 @@
             "PROCESSING": "Memory Fading",
             "HE": "He",
             "EN": "En",
-            "PLEASE_MAIL": "Please mail it to after the burn:"
+            "PLEASE_MAIL": "Please mail it to after the burn:",
+            "MAIL_IT": "Mail it!",
+            "WILL_DO": "Will do!",
+            "TO_THE_GALLERY": "To The Gallery..."
         }        
     },
     "he": {
@@ -36,7 +39,10 @@
             "PROCESSING": "הזכרון מתפוגג",
             "HE": "He",
             "EN": "En",
-            "PLEASE_MAIL": "אנא שלחו לי במייל את התמונה:"
+            "PLEASE_MAIL": "אנא שלחו לי במייל את התמונה:",
+            "MAIL_IT": "שלח!",
+            "WILL_DO": "סבבה!",
+            "TO_THE_GALLERY": "לגלריה..."
 
         }
     }

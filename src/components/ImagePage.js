@@ -28,9 +28,9 @@ export default ({match}) => {
 
     if (mailStatus === 'sent') {
         emailSection = (
-            <div>
-                <p>Will do!</p>
-                <Link to="/gallery">Take me to the gallery</Link>
+            <div className='whiter'>
+                <p>{t('WILL_DO')}</p>
+                <Link to="/gallery" style={{color: '000'}}>{t('TO_THE_GALLERY')}</Link>
 
             </div>
         );
@@ -61,7 +61,7 @@ export default ({match}) => {
                     enabled
                 />
             </div>
-            <Button onClick={onSendMail} label={'Mail!'} />
+            <Button onClick={onSendMail} label={t('MAIL_IT')} />
             
         </div>
     }
@@ -70,14 +70,14 @@ export default ({match}) => {
 
     return (
         <Page className2='imagePage'>
-            
+            <div>
             <div className='dynamic'>
             
                 <img className='image-shot' src={getImageSrc(imageId)} alt="snapshot"/>
             </div>
             {emailSection}
             
-          
+            </div>
         </Page>
     );
 }
