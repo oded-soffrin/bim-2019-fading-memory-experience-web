@@ -3,11 +3,12 @@ import changeRouteFactory from '../utils/changeRouteFactory'
 import Button from './Button2'
 import { useTranslation } from 'react-i18next';
 
-const Header = ({history}) => {
+const Header = ({history, langChange}) => {
 
     const { t, i18n } = useTranslation();
 
     const changeLanguage = lng => {
+        langChange(lng);
       i18n.changeLanguage(lng);
     };
   

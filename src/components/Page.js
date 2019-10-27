@@ -1,13 +1,13 @@
 import React, {useEffect} from 'react';
-
-const Page = ({children, className2 = '', styles}) => {
-
-
+import {isDev} from '../utils/global'
+const Page = ({children, className2 = ''}) => {
+  
+  
   useEffect(() => {
     window.keepalive();
   }, [])
   return (
-      <header className={`App-header ${className2}`} style={styles}>
+      <header className={`${isDev ? 'dev' : '' } App-header ${className2}`}>
           
           {children}
       </header>

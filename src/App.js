@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import './i18n'
 import HomePage from './components/HomePage'
@@ -17,14 +17,19 @@ const startWatchDog = (customHistory) => {
   console.log('watchdog started, going home in ', watchdog.restartMin, 'minutes');
 }
 
+const customHistory = createBrowserHistory();
+startWatchDog(customHistory);
+
 function App() {
   
-  const customHistory = createBrowserHistory();
-  startWatchDog(customHistory);
+  const [dir, setDir] = useState('ltr');
+  
   return (
     
-      <div className="App">
-          <Header history={customHistory} />
+      <div className={`App ${dir}`}>
+          <Header history={customHistory} langChange={lng => {
+            setDir(lng === 'he' ? 'rtl' : 'ltr');
+          }}/>
           <Router history={customHistory}>
             <Route path='/' exact  key={`home`} component={HomePage} />
             <Route path='/about' exact key={`about`}  component={AboutPage} />

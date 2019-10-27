@@ -16,11 +16,13 @@ export default ({next}) => {
             <div className='row'>
             <Button
                 big
+                type='new'
                 onClick={() => {next(true)}}
             label={t('YES')}
             />
             <Button
                 big
+                type='new'
                 onClick={() => {next(false)}}
             label={t('NO')}
             />

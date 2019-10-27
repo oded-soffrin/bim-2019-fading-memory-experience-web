@@ -7,6 +7,10 @@
 
 }
 
+.App.rtl {
+  direction: rtl;
+}
+
 
 .navbar {
   background: white;
@@ -27,6 +31,10 @@
   font-size: 18px;
 }
 
+.rtl .menu .button {
+  margin-left: 0;
+  margin-right: 20px;
+}
 
 .menu-lang {
   display: flex;
@@ -39,6 +47,11 @@
   font-size: 18px;
 }
 
+.rtl .menu-lang div { 
+  margin-right: 0;
+  margin-left: 20px;
+}
+
 .row {
   display: flex;
   justify-content: space-evenly;
@@ -46,20 +59,21 @@
 
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
   flex: 1;
 }
 
 
 
 .Instructions-page {
-  text-align: left;
+  padding: 10px;
+  background-color: rgba(255,255,255,.2);
 }
 
 .App-link {
@@ -132,14 +146,20 @@ a {
 }
 
 
-.App-header.homePage {
+.App-header {
+
+  background-image: linear-gradient(black, black), url('/image?id=0');
   background-size: cover;
   justify-content: normal;
   background-blend-mode: saturation;
   background-color: transparent;
 
 }
-
+.App-header.dev
+{ 
+  background-image: linear-gradient(black, black), url('https://img.etimg.com/thumb/msid-68721417,width-643,imgsize-1016106,resizemode-4/nature1_gettyimages.jpg');
+  
+}
 .imagePage .image-shot {
   height: 460px;
 }
